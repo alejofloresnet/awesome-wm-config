@@ -1,0 +1,123 @@
+-- {{{ START custom alejomenus 
+
+-- CONFIGS FOUND AT
+-- ~/.local/share/applications
+-- /usr/share/applications
+
+-- "= web"
+alejomenuWeb = {
+   { "* chrome", "/usr/bin/google-chrome-stable" },
+   { "* qupzilla", "qupzilla" },
+   { "dillo", "dillo" },
+   { "filezilla", "filezilla" },
+   { "firefox", "firefox" },
+   { "links2", "/usr/bin/links2" },
+   { "putty", "putty" }, 
+   { "qbittorrent", "qbittorrent" },
+   { "steadyflow", "steadyflow" },
+   { "w3m", "xterm -e w3m http://google.com/" }
+}
+
+-- "= social"
+alejomenuSocial = {
+   { "* pidgin", "pidgin" },
+   { "* skype", "env PULSE_LATENCY_MSEC=60 skype" },
+   { "finch", terminal .. " -e finch" },
+   { "rainbowstream", terminal .. " -e rainbowstream" },
+   { "xchat irc", "sh -c 'xchat --existing --url %U || exec xchat'" }
+}
+
+-- "= files"
+alejomenuFiles = {
+   { "* pcmanfm", "pcmanfm" }, 
+   { "deluge", "deluge-gtk" },
+   { "filezilla", "filezilla" },
+   { "mc", terminal .. " -e mc" },
+   { "qbittorrent", "qbittorrent" },
+   { "ranger", terminal .. " -e ranger" },
+   { "thunar", "thunar" }
+}
+
+-- "= editors"
+alejomenuEditors = {
+   { "* leafpad", "leafpad" },
+   { "* sublime", "/usr/bin/subl" },
+   { "nano", terminal .. " -e nano" }
+}
+
+-- "= dev"
+alejomenuDev = {
+   { "* git gui", "git gui" },
+   { "* sublime", "/usr/bin/subl" },
+   { "agave", "agave" },
+   { "brackets", "/opt/brackets/brackets" },
+   { "nano", terminal .. " -e nano" }
+}
+
+-- "= office"
+alejomenuOffice = {
+   { "* libre", "libreoffice" },
+   { "abiword", "abiword" },
+   { "gnumeric", "gnumeric" }
+}
+
+-- "= org"
+alejomenuOrg = {
+   { "* evernote", "/usr/bin/google-chrome-stable app=https://www.evernote.com/Home.action" },
+   { "* gcal", "/usr/bin/google-chrome-stable app=https://www.google.com/calendar/render?pli=1#h" },
+   { "* p.in", "/usr/bin/google-chrome-stable app=http://www.pinboard.in/u:mewmew/" },
+   { "* wunderlist", "/opt/google/chrome/google-chrome --profile-directory=Default --app-id=ojcflmmmcfpacggndoaaflkmcoblhnbh" },
+   { "* ynab", "'/home/alejo/.cxoffice/You_Need_A_Budget/desktopdata/cxmenu/StartMenu.C^5E3A_users_Public_Start^2BMenu/Programs/YNAB+4/YNAB+4.lnk' %u" },
+   { "arbeit", terminal .. " -e arbeit"},
+   { "gcalcli", terminal .. " -e gcalcli calw"}
+}
+
+-- "= grafix"
+alejomenuGrafix = {
+   { "* gimp", "gimp-2.8" },
+   { "* mtpaint", "mtpaint" },
+   { "agave", "agave" },
+   { "img magick", "/usr/bin/display.im6" },
+   { "inkscape", "inkscape" },
+   { "ristretto", "ristretto" },
+   { "scribus", "scribus" }
+}
+
+-- "= media"
+alejomenuMedia = {
+   { "* vlc", "/usr/bin/vlc" },
+   { "* xine", "xine" },
+   { "cmus", terminal .. " -e cmus" },
+   { "easytag", "easytag" },
+   { "mp3blaster", terminal .. " -e mp3blaster" },
+   { "minitube", "minitube" },
+   { "mpv", "mpv --no-terminal --force-window" },
+   { "pulseaudio mixer", "pavucontrol" },
+   { "qbittorrent", "qbittorrent" },
+   { "rhythmbox", "rhythmbox" },
+   { "youtube-dl", "python2 /usr/share/pyshared/youtube_dl_gui/__main__.py" }
+}
+
+-- "= games"
+alejomenuGames = {
+   { "* steam", "/usr/bin/steam" },
+   { "* steam (win)", "'/home/alejo/.cxoffice/Steam/desktopdata/cxmenu/StartMenu.C^5E3A_users_crossover_Start^2BMenu/Programs/Steam/Steam.lnk'" }
+}
+
+-- "= sys"
+alejomenuSys = {
+   { "* crossover office", "/opt/cxoffice/bin/crossover" },
+   { "* tasks", "xfce4-taskmanager" },
+   { "* terminal", terminal },
+   { "* ubuntu software center", "/usr/bin/software-center" }
+}
+
+-- "= terms"
+alejomenuTerms = {
+   { "* roxterm", "roxterm" },
+   { "* xfce4 term", "xfce4-terminal"},
+   { "* xterm", "xterm" }
+}
+
+-- END custom alejomenus }}} 
+
