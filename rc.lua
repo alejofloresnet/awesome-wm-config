@@ -88,7 +88,7 @@ end
 -- {{{ Tags
 -- Define a tag table which hold all screen tags.
 tags = {
-  names = { "[1] main", "[2] social", "[3] org", "[4] media", "[5] work", "[6] etc" }, 
+  names = { "[1] main", "[2] soc", "[3] org", "[4] media", "[5] work", "[6] etc" }, 
   layout = { layouts[3], layouts[3], layouts[3], layouts[3], layouts[3], layouts[3]
 }} 
 for s = 1, screen.count() do
