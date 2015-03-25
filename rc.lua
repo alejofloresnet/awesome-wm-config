@@ -14,6 +14,11 @@ local menubar = require("menubar")
 -- Load Debian menu entries
 require("debian.menu")
 
+-- Load the APW Pulseaudio volume widget
+-- Must be after beautiful.init to work
+-- [ https://github.com/seniorivn/apw ]
+local APW = require("apw/widget")
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -84,7 +89,7 @@ end
 -- Define a tag table which hold all screen tags.
 tags = {
 	names = { "[1] main", "[2] social", "[3] org", "[4] media", "[5] work", "[6] etc" }, 
-	layout = { layouts[12], layouts[12], layouts[12], layouts[12], layouts[12], layouts[12]
+	layout = { layouts[3], layouts[3], layouts[3], layouts[3], layouts[3], layouts[3]
 }} 
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
@@ -253,6 +258,11 @@ mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 -- }}}
 
+-- Load the APW Pulseaudio volume widget
+-- Must be after beautiful.init to work
+-- [ https://github.com/seniorivn/apw ]
+local APW = require("apw/widget")
+
 -- {{{ Wibox
 -- Create a textclock widget
 mytextclock = awful.widget.textclock()
@@ -336,6 +346,9 @@ for s = 1, screen.count() do
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then right_layout:add(wibox.widget.systray()) end
+    -- Example: Add APW PulseAudio volume control to wibox. 
+    -- [ https://github.com/seniorivn/apw ]
+    right_layout:add(APW)
     right_layout:add(mytextclock)
     right_layout:add(mylayoutbox[s])
 
@@ -577,7 +590,7 @@ client.connect_signal("manage", function (c, startup)
         middle_layout:add(title)
         middle_layout:buttons(buttons)
 
-        -- Now bring it all together
+        -- Now bring it all togemther
         local layout = wibox.layout.align.horizontal()
         layout:set_left(left_layout)
         layout:set_right(right_layout)
